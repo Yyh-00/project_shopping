@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息注册页</title>
+    <link rel="shortcut icon" href=" favicon.ico" />
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+    <div class="w">
+        <header>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt=""></a>
+            </div>
+        </header>
+        <div class="registerarea">
+            <h3>
+                注册新用户
+                <span>我有账号，去<a href="#">登录</a></span>
+            </h3>
+            <form action="">
+                <div class="reg_form">
+                    <ul>
+                        <li>
+                            <label for="phone">手机号：</label>
+                            <input type="text" name="phone" id="phone" class="inp">
+                            <div>
+                                <i class="error_icon"></i>
+                                <span class="error"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <label for="code">短信验证码：</label>
+                            <input type="text " name="code" id="code" class="inp">
+                            <div>
+                                <i class="success_icon"></i>
+                                <span class="success"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <label for="pwd">登录密码：</label>
+                            <input type="password" name="pwd" id="pwd" class="inp">
+                            <span>
+                                <img src="images/sk.png" alt="" id="eye">
+                            </span>
+                        </li>
+                        <li class="safe">
+                            安全程度 &nbsp;<em class="ruo">弱</em> <em class="zhong">中</em> <em class="qiang">强</em></li>
+                        <li>
+                            <label for="pwd1">确认密码：</label><input type="password" name="pwd" id="pwd1" class="inp">
+                            <span>
+                                <img src="images/sk.png" alt="" id="eyes">
+                            </span>
+                        </li>
+                        <li class="agree">
+                            <input type="checkbox" name="" id="">同意协议并注册<a href="#">《知果果用户协议》</a>
+                        </li>
+                        <li class="btn">
+                            <input type="submit" value="完成注册">
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+        <script>
+            var error = document.querySelector('.error');
+            var error_icon = document.querySelector('.error_icon');
+            var inp = document.getElementById('phone');
+            var pwd = document.getElementById('pwd');
+            var pwd1 = document.getElementById('pwd1');
+            var eye = document.getElementById('eye');
+            var eyes = document.getElementById('eyes');
+            var flag = 1;
+            inp.onblur = function() {
+                if (inp.value.length !== 11) {
+                    error_icon.style.background = 'url(images/error.png)'
+                    error.innerHTML = '手机输入格式错误';
+                } else {
+                    error_icon.style.background = 'url(images/success.png)'
+                    error.innerHTML = '手机输入格式正确';
+                }
+            }
+            eye.onclick = function() {
+                if (flag == 1) {
+                    pwd.type = 'text';
+                    flag = 0;
+                } else {
+                    pwd.type = 'password';
+                    flag = 1;
+                }
+            }
+            eyes.onclick = function() {
+                if (flag == 1) {
+                    pwd1.type = 'text';
+                    flag = 0;
+                } else {
+                    pwd1.type = 'password';
+                    flag = 1;
+                }
+            }
+        </script>
+        <footer>
+            <div class="mod_copright">
+                <div class="link">
+                    <a href="#">关于我们</a> | <a href="#">关于我们</a> | <a href="#">关于我们</a> | <a href="#">关于我们</a> | <a href="#">关于我们</a> | <a href="#">关于我们</a> | <a href="#">关于我们</a> | <a href="#">关于我们</a> | <a href="#">关于我们</a> | <a href="#">关于我们</a> |
+                    <a href="#">关于我们</a> | <a href="#">关于我们</a>
+                </div>
+                地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cnbrb<br> 京ICP备08001421号京公网安备110108007702
+
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>品优购</title>
+    <meta name="description" content="品优购商城——转页的网购平台">
+    <meta name="keywords" content="网上购物，网上商城，手机，电脑，衣服，鞋子">
+    <link rel="shortcut icon" href=" favicon.ico" />
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/animate.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/aside.js"></script>
+
+</head>
+
+<body>
+    <!-- 快捷导航栏开始 -->
+    <section class="shortcut">
+        <div class="w">
+            <div class="fl">
+                <ul>
+                    <li>品优购欢迎您！</li>&nbsp;
+                    <li><a href="javascript:;">请登录</a>&nbsp;&nbsp;<a href="register.html" class="style_red">免费注册</a></li>
+                </ul>
+            </div>
+            <div class="fr">
+                <ul>
+                    <li>我的订单</li>
+                    <li></li>
+                    <li class="arrow_icaon">我的品优购</li>
+                    <li></li>
+                    <li>品优购会员</li>
+                    <li></li>
+                    <li>企业代购</li>
+                    <li></li>
+                    <li class="arrow_icaon">关注品优购</li>
+                    <li></li>
+                    <li class="arrow_icaon">客户服务</li>
+                    <li></li>
+                    <li class="arrow_icaon">网站导航</li>
+                </ul>
+            </div>
+        </div>
+        <!-- 快捷导航栏结束 -->
+        <!-- 头部开始 -->
+    </section>
+    <!-- 快捷导航栏结束 -->
+    <!-- 头部开始 -->
+    <section class="header w">
+        <div class="logo">
+            <h1><a href="index.html" title="品优购商城">品优购商城</a></h1>
+        </div>
+        <div class="search">
+            <input type="text" name="" id="search" value="手机">
+            <button>搜索</button>
+        </div>
+        <script>
+            var search = document.getElementById('search');
+            search.onfocus = function() {
+                if (this.value === '手机') { //注意字符要有单引号
+                    this.value = '';
+                }
+                this.style.color = '#333';
+            }
+            search.onblur = function() {
+                if (this.value === '') {
+                    this.value = '手机';
+                }
+                this.style.color = '#999';
+            }
+        </script>
+        <div class="hotwords">
+            <ul>
+                <li class="style_red">优惠购首发 </li>
+                <li>亿元优惠</li>
+                <li>9.9元团购</li>
+                <li>美满99减30</li>
+                <li>办公用品 </li>
+                <li>电脑</li>
+                <li>通信</li>
+            </ul>
+        </div>
+        <div class="shopcar">
+            <a href="car.html">我的购物车</a>
+            <i class="count">8</i>
+        </div>
+    </section>
+    <!-- 头部结束 -->
+    <!-- 导航栏开始 -->
+    <nav class="nav">
+        <div class="w">
+            <div class="dropdowm">
+                <div class="dt">全部商品分类</div>
+                <div class="dd">
+                    <ul>
+                        <li><a href="list.html" class="next">家用电器</a></li>
+                        <li><a href="list.html" class="next">手机、数码、通信</a></li>
+                        <li><a href="list.html" class="next">电脑、办公</a></li>
+                        <li><a href="list.html" class="next">家居、家具、家装、厨具</a></li>
+                        <li><a href="list.html" class="next">男装、女装、童装、内衣</a></li>
+                        <li><a href="list.html" class="next">个户化妆、清洁用品、宠物</a></li>
+                        <li><a href="list.html" class="next">鞋靴、箱包、珠宝、奢侈品</a></li>
+                        <li><a href="list.html" class="next">运动户外、钟表</a></li>
+                        <li><a href="list.html" class="next">汽车、汽车用品</a></li>
+                        <li><a href="list.html" class="next">母婴、玩具乐器</a></li>
+                        <li><a href="list.html" class="next">食品、酒类、生鲜、特产</a></li>
+                        <li><a href="list.html" class="next">医药保健</a></li>
+                        <li><a href="list.html">图书、音像、电子书</a></li>
+                        <li><a href="list.html">彩票、旅行、充值、票务</a></li>
+                        <li><a href="list.html">理财、众筹、白条、保险</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navitems">
+                <a href="javascript:;">服装城 </a>
+                <a href="javascript:;">美妆馆</a>
+                <a href="javascript:;">传智超市</a>
+                <a href="javascript:;">全球购</a>
+                <a href="javascript:;">闪购</a>
+                <a href="javascript:;">团购</a>
+                <a href="javascript:;">拍卖</a>
+                <a href="javascript:;">有趣 </a>
+            </div>
+        </div>
+
+    </nav>
+    <!-- 导航栏结束 -->
+    <!-- 侧边栏开始 -->
+    <aside class="aside">
+        <ul>
+            <li>家用电器</li>
+            <li>手机数码</li>
+            <li>电脑办公</li>
+            <li>家居家具</li>
+            <li class="backTop">返回顶部</li>
+        </ul>
+    </aside>
+    <script>
+        window.addEventListener('load', function() {
+            asideScroll();
+
+            function asideScroll() {
+                var aside = document.querySelector('.aside');
+                var main = document.querySelector('.main');
+                var backtop = document.querySelector('.backTop');
+                var mainTop = main.offsetTop;
+                var asideTop = aside.offsetTop - mainTop;
+                document.addEventListener('scroll', function() {
+                    if (window.pageYOffset >= mainTop) {
+                        aside.style.position = 'fixed';
+                        // aside.style.top = '145px';
+                        // console.log(asideTop);
+                        aside.style.top = asideTop + 'px';
+                        backtop.style.display = 'block';
+                    } else {
+                        aside.style.position = 'absolute';
+                        aside.style.top = '360px';
+                        backtop.style.display = 'none';
+                    }
+                })
+                window.addEventListener('resize', function() {
+                    if (window.innerWidth <= 1400) {
+                        aside.style.display = 'none';
+                    } else {
+                        aside.style.display = 'block';
+
+                    }
+                })
+            }
+
+        })
+    </script>
+    <!-- 侧边栏结束 -->
+    <!-- 首页main开始 -->
+    <div class="w">
+        <div class="main">
+            <div class="focus">
+                <a href="javascript:;">
+                    <div class="arrow-l">&lt;</div>
+                </a>
+                <a href="javascript:;">
+                    <div class="arrow-r">&gt;</div>
+                </a>
+                <ul>
+                    <li><img src="upload/focus.png" alt=""></li>
+                    <li><img src="upload/focus1.jpg" alt=""></li>
+                    <li><img src="upload/focus2.jpg" alt=""></li>
+                    <li><img src="upload/focus3.jpg" alt=""></li>
+                </ul>
+                <ol class="promo_nav">
+
+                </ol>
+            </div>
+            <div class="newsflash">
+                <div class="news">
+                    <div class="news-hd">
+                        <h4>品优购快报</h4>
+                        <i class="move"><a href="javascript:;">更多</a></i>
+                    </div>
+                    <div class="news-bd">
+                        <ul>
+                            <li><a href="javascript:;">【<strong>特惠</strong>】备战开学季 全民半价购数码</a></li>
+                            <li><a href="javascript:;">【<strong>特惠</strong>】备战开学季 全民半价购数码</a></li>
+                            <li><a href="javascript:;">【<strong>特惠</strong>】备战开学季 全民半价购数码</a></li>
+                            <li><a href="javascript:;">【<strong>特惠</strong>】备战开学季 全民半价购数码</a></li>
+                            <li><a href="javascript:;">【<strong>特惠</strong>】备战开学季 全民半价购数码</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lifeservice">
+                    <ul>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="bargain">
+                    <img src="upload/bargain.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 首页main结束 -->
+    <!-- 推荐模块开始 -->
+    <div class="recom w">
+        <div class="recom_hd">
+            <img src="images/recomd.png" alt="">
+        </div>
+        <div class="recom_bd">
+            <ul>
+                <li>
+                    <a href="javascript:;"><img src="upload/recomd_03.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="upload/recomd_03.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="upload/recomd_03.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="upload/recomd_03.png" alt=""></a>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+    <!-- 推荐模块结束 -->
+    <!-- 猜你喜欢模块开始 -->
+    <div class="like w">
+        <div class="like_hd">
+            <h4>猜你喜欢</h4>
+            <i>换一批</i>
+        </div>
+        <div class="like_bd">
+            <ul>
+                <li>
+                    <a href="javascript:;"><img src="upload/like_01.png" alt=""></a>
+                    <div class="price">
+                        <h5>阳光美包新款单肩包女</h5>
+                        <p>包时尚子母包四件套女</p>
+                        <div class="price_bd">¥116</div>
+                    </div>
+                </li>
+                <li>
+                    <img src="upload/like_01.png" alt="">
+                    <div class="price">
+                        <h5>阳光美包新款单肩包女</h5>
+                        <p>包时尚子母包四件套女</p>
+                        <div class="price_bd">¥116</div>
+                    </div>
+                </li>
+                <li>
+                    <img src="upload/like_01.png" alt="">
+                    <div class="price">
+                        <h5>阳光美包新款单肩包女</h5>
+                        <p>包时尚子母包四件套女</p>
+                        <div class="price_bd">¥116</div>
+                    </div>
+                </li>
+                <li>
+                    <img src="upload/like_01.png" alt="">
+                    <div class="price">
+                        <h5>阳光美包新款单肩包女</h5>
+                        <p>包时尚子母包四件套女</p>
+                        <div class="price_bd">¥116</div>
+                    </div>
+                </li>
+                <li>
+                    <img src="upload/like_01.png" alt="">
+                    <div class="price">
+                        <h5>阳光美包新款单肩包女</h5>
+                        <p>包时尚子母包四件套女</p>
+                        <div class="price_bd">¥116</div>
+                    </div>
+                </li>
+                <li>
+                    <img src="upload/like_01.png" alt="">
+                    <div class="price">
+                        <h5>阳光美包新款单肩包女</h5>
+                        <p>包时尚子母包四件套女</p>
+                        <div class="price_bd">¥116</div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- 猜你喜欢模块结束 -->
+    <!-- 商品电梯模块开始 -->
+    <div class="floor">
+        <div class="dianqi w">
+            <div class="box_hd">
+                <h5>家用电器</h5>
+                <div class="table_list">
+                    <ul>
+                        <li><a href="javascript:;" class="table_list_items">热门</a>|</li>
+                        <li><a href="javascript:;">大家电</a>|</li>
+                        <li><a href="javascript:;">生活电器</a>|</li>
+                        <li><a href="javascript:;">个护健康</a>|</li>
+                        <li><a href="javascript:;">应季电器</a>|</li>
+                        <li><a href="javascript:;">空气/净水</a>|</li>
+                        <li><a href="javascript:;">新奇特</a>|</li>
+                        <li><a href="javascript:;">高端电器</a>|</li>
+                        <li><a href="javascript:;">厨房电器</a>|</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="box_bd">
+                <div class="table_content">
+                    <div class="table_list_items">
+                        <div class="col210">
+                            <ul>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                            </ul>
+                            <a href="javascript:;"><img src="upload/floor_1_1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col330">
+                            <a href="javascript:;"><img src="upload/floor_1_2.png" alt=""></a>
+                        </div>
+                        <div class="col220">
+                            <a href="javascript:;"><img src="upload/floor_1_3.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor_1_4.png" alt=""></a>
+                        </div>
+                        <div class="col220">
+                            <a href="javascript:;"><img src="upload/floor_1_5.png" alt=""></a>
+                        </div>
+                        <div class="col219">
+                            <a href="javascript:;"><img src="upload/floor_1_6.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor_1_7.png" alt=""></a>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shouji w">
+            <div class="box_hd">
+                <h5>手机数码</h5>
+                <div class="table_list">
+                    <ul>
+                        <li><a href="javascript:;" class="table_list_items">热门</a>|</li>
+                        <li><a href="javascript:;">大家电</a>|</li>
+                        <li><a href="javascript:;">生活电器</a>|</li>
+                        <li><a href="javascript:;">个护健康</a>|</li>
+                        <li><a href="javascript:;">应季电器</a>|</li>
+                        <li><a href="javascript:;">空气/净水</a>|</li>
+                        <li><a href="javascript:;">新奇特</a>|</li>
+                        <li><a href="javascript:;">高端电器</a>|</li>
+                        <li><a href="javascript:;">厨房电器</a>|</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="box_bd">
+                <div class="table_content">
+                    <div class="table_list_items">
+                        <div class="col210">
+                            <ul>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                            </ul>
+                            <a href="javascript:;"><img src="upload/floor_1_1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col330">
+                            <a href="javascript:;"><img src="upload/floor_1_2.png" alt=""></a>
+                        </div>
+                        <div class="col220">
+                            <a href="javascript:;"><img src="upload/floor_1_3.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor_1_4.png" alt=""></a>
+                        </div>
+                        <div class="col220">
+                            <a href="javascript:;"><img src="upload/floor_1_5.png" alt=""></a>
+                        </div>
+                        <div class="col219">
+                            <a href="javascript:;"><img src="upload/floor_1_6.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor_1_7.png" alt=""></a>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="diannao w">
+            <div class="box_hd">
+                <h5>电脑办公</h5>
+                <div class="table_list">
+                    <ul>
+                        <li><a href="javascript:;" class="table_list_items">热门</a>|</li>
+                        <li><a href="javascript:;">大家电</a>|</li>
+                        <li><a href="javascript:;">生活电器</a>|</li>
+                        <li><a href="javascript:;">个护健康</a>|</li>
+                        <li><a href="javascript:;">应季电器</a>|</li>
+                        <li><a href="javascript:;">空气/净水</a>|</li>
+                        <li><a href="javascript:;">新奇特</a>|</li>
+                        <li><a href="javascript:;">高端电器</a>|</li>
+                        <li><a href="javascript:;">厨房电器</a>|</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="box_bd">
+                <div class="table_content">
+                    <div class="table_list_items">
+                        <div class="col210">
+                            <ul>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                            </ul>
+                            <a href="javascript:;"><img src="upload/floor_1_1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col330">
+                            <a href="javascript:;"><img src="upload/floor_1_2.png" alt=""></a>
+                        </div>
+                        <div class="col220">
+                            <a href="javascript:;"><img src="upload/floor_1_3.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor_1_4.png" alt=""></a>
+                        </div>
+                        <div class="col220">
+                            <a href="javascript:;"><img src="upload/floor_1_5.png" alt=""></a>
+                        </div>
+                        <div class="col219">
+                            <a href="javascript:;"><img src="upload/floor_1_6.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor_1_7.png" alt=""></a>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jiaju w">
+            <div class="box_hd">
+                <h5>家居家具</h5>
+                <div class="table_list">
+                    <ul>
+                        <li><a href="javascript:;" class="table_list_items">热门</a>|</li>
+                        <li><a href="javascript:;">大家电</a>|</li>
+                        <li><a href="javascript:;">生活电器</a>|</li>
+                        <li><a href="javascript:;">个护健康</a>|</li>
+                        <li><a href="javascript:;">应季电器</a>|</li>
+                        <li><a href="javascript:;">空气/净水</a>|</li>
+                        <li><a href="javascript:;">新奇特</a>|</li>
+                        <li><a href="javascript:;">高端电器</a>|</li>
+                        <li><a href="javascript:;">厨房电器</a>|</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="box_bd">
+                <div class="table_content">
+                    <div class="table_list_items">
+                        <div class="col210">
+                            <ul>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                                <li><a href="javascript:;">节能补贴</a> </li>
+                            </ul>
+                            <a href="javascript:;"><img src="upload/floor_1_1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col330">
+                            <a href="javascript:;"><img src="upload/floor_1_2.png" alt=""></a>
+                        </div>
+                        <div class="col220">
+                            <a href="javascript:;"><img src="upload/floor_1_3.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor_1_4.png" alt=""></a>
+                        </div>
+                        <div class="col220">
+                            <a href="javascript:;"><img src="upload/floor_1_5.png" alt=""></a>
+                        </div>
+                        <div class="col219">
+                            <a href="javascript:;"><img src="upload/floor_1_6.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor_1_7.png" alt=""></a>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 商品电梯模块结束 -->
+    <!-- 底部模块开始 -->
+    <footer class="footer">
+        <div class="w">
+            <div class="mod_service">
+                <ul>
+                    <li>
+                        <i class="survice_img1"></i>
+                        <div class="survice_txt">
+                            <h5>正品保障</h5>
+                            <p>正品保障，提供发票</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="survice_img2"></i>
+                        <div class="survice_txt">
+                            <h5>正品保障</h5>
+                            <p>正品保障，提供发票</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="survice_img3"></i>
+                        <div class="survice_txt">
+                            <h5>正品保障</h5>
+                            <p>正品保障，提供发票</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="survice_img4"></i>
+                        <div class="survice_txt">
+                            <h5>正品保障</h5>
+                            <p>正品保障，提供发票</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="survice_img5"></i>
+                        <div class="survice_txt">
+                            <h5>正品保障</h5>
+                            <p>正品保障，提供发票</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="mod_help">
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd>购物流程</dd>
+                    <dd>会员介绍</dd>
+                    <dd>生活旅行/团购</dd>
+                    <dd>常见问题</dd>
+                    <dd>大家电</dd>
+                    <dd>联系客服</dd>
+                </dl>
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd>购物流程</dd>
+                    <dd>会员介绍</dd>
+                    <dd>生活旅行/团购</dd>
+                    <dd>常见问题</dd>
+                    <dd>大家电</dd>
+                    <dd>联系客服</dd>
+                </dl>
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd>购物流程</dd>
+                    <dd>会员介绍</dd>
+                    <dd>生活旅行/团购</dd>
+                    <dd>常见问题</dd>
+                    <dd>大家电</dd>
+                    <dd>联系客服</dd>
+                </dl>
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd>购物流程</dd>
+                    <dd>会员介绍</dd>
+                    <dd>生活旅行/团购</dd>
+                    <dd>常见问题</dd>
+                    <dd>大家电</dd>
+                    <dd>联系客服</dd>
+                </dl>
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd>购物流程</dd>
+                    <dd>会员介绍</dd>
+                    <dd>生活旅行/团购</dd>
+                    <dd>常见问题</dd>
+                    <dd>大家电</dd>
+                    <dd>联系客服</dd>
+                </dl>
+                <dl>
+                    <dt>帮助中心</dt>
+                    <dd>
+                        <img src="images/wx_cz.jpg" alt=""><br> 品优购客户端
+                    </dd>
+                </dl>
+            </div>
+            <div class="mod_copright">
+                <div class="link">
+                    <a href="javascript:;">关于我们</a> | <a href="javascript:;">关于我们</a> | <a href="javascript:;">关于我们</a> | <a href="javascript:;">关于我们</a> | <a href="javascript:;">关于我们</a> | <a href="javascript:;">关于我们</a> | <a href="javascript:;">关于我们</a>                    | <a href="javascript:;">关于我们</a> | <a href="javascript:;">关于我们</a> | <a href="javascript:;">关于我们</a> |
+                    <a href="javascript:;">关于我们</a> | <a href="javascript:;">关于我们</a>
+                </div>
+                地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cnbrb<br> 京ICP备08001421号京公网安备110108007702
+
+            </div>
+        </div>
+    </footer>
+    <!-- 底部模块结束 -->
+    <!-- <script src="js/EasyLazyload.min.js"></script>
+    <script>
+        lazyLoadInit({
+            showTime: 1100,
+            onLoadBackEnd: function(i, e) {
+                console.log("onLoadBackEnd:" + i);
+            },
+            onLoadBackStart: function(i, e) {
+                console.log("onLoadBackStart:" + i);
+            }
+        });
+    </script> -->
+</body>
+
+</html>

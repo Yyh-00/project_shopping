@@ -1,0 +1,124 @@
+.sk {
+    position: absolute;
+    top: 35px;
+    left: 185px;
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 15px;
+    border-left: 1px solid #b1191a;
+}
+
+.sk_list {
+    float: left;
+}
+
+.sk_list ul li {
+    float: left;
+}
+
+.sk_list ul li a {
+    display: inline-block;
+    padding: 0 23px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.sk_con {
+    float: left;
+}
+
+.sk_con ul li {
+    float: left;
+    padding: 0 25px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 14px;
+}
+
+.sk_con ul li:last-child::after {
+    content: "\e91e";
+    font-family: 'icomoon';
+}
+
+.sk_bd {
+    margin-top: 25px;
+}
+
+.sk_bd {
+    margin-bottom: 275px;
+}
+
+.sk_bd ul li {
+    float: left;
+    width: 290px;
+    height: 460px;
+    margin-right: 13px;
+}
+
+.sk_bd ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.sk_bd ul li img {
+    width: 100%;
+}
+
+.sk_bd .clearfix .list {
+    margin-left: 12px;
+    width: 267px;
+    height: 95px;
+    font-size: 14px;
+    font-family: "宋体";
+}
+
+.sk_bd .clearfix .list h5 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.sk_bd .clearfix .list p {
+    font-family: "微软雅黑";
+    margin-top: 5px;
+}
+
+.sk_bd .clearfix .list p i {
+    text-decoration: line-through;
+}
+
+.sk_bd .clearfix .list p .sk_price {
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.sk_bd .clearfix .list>i .list_bdb {
+    display: inline-block;
+    margin: 0 10px;
+    width: 131px;
+    height: 13px;
+    border: 1px solid red;
+    border-radius: 7px;
+    background-color: #fff;
+}
+
+.sk_bd .clearfix .list>i .list_bdb .list_bdm {
+    width: 87%;
+    height: 13px;
+    background-color: red;
+    border-radius: 7px 0 0 7px;
+}
+
+.sk_bd .clearfix button {
+    width: 290px;
+    height: 50px;
+    margin-top: 17px;
+    font-size: 20px;
+    font-family: "宋体";
+    line-height: 50px;
+    text-align: center;
+    background-color: #b1191a;
+    color: #fff;
+}
